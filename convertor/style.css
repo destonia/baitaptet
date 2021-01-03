@@ -1,0 +1,11 @@
+.inner{
+    position: relative;
+    color: gold;
+    margin: auto;
+    top: 0px;
+    border-style: dashed;
+    border-color: black;
+}
+.outer{
+    position: absolute;
+}

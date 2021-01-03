@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<p>Nhập cân nặng</p>
+<input id="kg" type="number" placeholder="kg"><br>
+<p>Nhập chiều cao</p>
+<input id="m" type="number" placeholder="m" ><br>
+<button type="button" onclick="cal()">Lấy kết quả</button>
+</body>
+<script>
+    function cal() {
+        let x = parseFloat(document.getElementById("kg").value)
+        let y = parseFloat(document.getElementById("m").value)
+        let bmi = x/ (y*y);
+        if (bmi >= 40) {
+            alert("bạn béo như chó");
+        }
+        else if (bmi>=35){
+            alert("bạn béo như lợn");
+        }
+        else if (bmi>=30){
+            alert("bạn béo như mèo")
+        }
+        else if (bmi>=25){
+            alert("bạn bị béo phì")
+        }
+        else if (bmi>=23){
+            alert("bạn bị thừa cân")
+        }
+        else if (bmi>=18.5){
+            alert("bình thường")
+        }
+        else {
+            alert("bạn gầy quá")
+        }
+    }
+</script>
+</html>

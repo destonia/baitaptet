@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONVERT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="outer">
+    <div id="currency" class="inner">
+    <p>Currency</p>
+    <p>I want to convert:</p>
+    <input id="ammoney" type="number" onkeyup="convert()">
+    <select id="money1" onchange="convert()">
+        <option id="vnd" value="23000" >VND</option>
+        <option id="usd" value="1">USD</option>
+        <option id="JPY" value="100">JPY</option>
+        <option id="EUR" value="0.5">EUR</option>
+        <option id="CNY" value="200">CNY</option>
+    </select><br>
+    <p>To:<span><select id="money2" onchange="convert()">
+        <option id="vnd2" value="23000" name="VND">VND</option>
+        <option id="usd2" value="1" name="USD">USD</option>
+        <option id="jpy2" value="100" name="JPY">JPY</option>
+        <option id="eur2" value="0.5" name="EUR">EUR</option>
+        <option id="cny2" value="200" name="CNY">CNY</option>
+    </select></span></p>
+    <p>Result:
+        <span id = "mon1"></span>
+        <span id = "mon2"></span>
+        <span> = </span>
+        <span id = "mon3"></span>
+        <span id = "mon4"></span></p>
+</div>
+    <div id="length" class="inner">
+        <p>Length</p>
+        <p>I want to convert:</p>
+        <input id="amlength" type="number" onkeyup="convert2()">
+        <select id="length1" onchange="convert2()">
+            <option id="mm" value="1000" >mm</option>
+            <option id="cm" value="100">cm</option>
+            <option id="dm" value="10">dm</option>
+            <option id="m" value="1">m</option>
+            <option id="km" value="0.001">km</option>
+        </select><br>
+        <p>To:<span><select id="length2" onchange="convert2()">
+            <option id="mm2" value="1000" >mm</option>
+            <option id="cm2" value="100">cm</option>
+            <option id="dm2" value="10">dm</option>
+            <option id="m2" value="1">m</option>
+            <option id="km2" value="0.001">km</option>
+        </select></span></p>
+        <p>Result:
+            <span id = "leng1"></span>
+            <span id = "leng2"></span>
+            <span> = </span>
+            <span id = "leng3"></span>
+            <span id = "leng4"></span></p>
+    </div>
+    <div id="weight" class="inner">
+    <p>Weight</p>
+    <p>I want to convert:</p>
+    <input id="amweight" type="number" onkeyup="convert3()">
+    <select id="weight1" onchange="convert3()">
+        <option id="mg1" value="1000">Miligram</option>
+        <option id="kg1" value="1" >Kilogram</option>
+        <option id="lb1" value="2.68">Pound</option>
+        <option id="cara1" value="5000">Karat</option>
+        <option id="ounce1" value="35.27">Ounce</option>
+    </select>
+    <br>
+    <p>To:<span>
+        <select id="weight2" onchange="convert3()">
+        <option id="mg2" value="1000">Miligram</option>
+        <option id="kg2" value="1" >Kilogram</option>
+        <option id="lb2" value="2.68">Pound</option>
+        <option id="cara2" value="5000">Karat</option>
+        <option id="ounce2" value="35.27">Ounce</option>
+    </select>
+    </span></p>
+    <p>Result:
+        <span id ="wei1"></span>
+        <span id="wei2"></span>
+        <span> = </span>
+        <span id="wei3"></span>
+        <span id="wei4"></span></p>
+</div>
+</div>
+
+
+</body>
+<script language="JavaScript" src="script.js">
+
+</script>
+</html>
