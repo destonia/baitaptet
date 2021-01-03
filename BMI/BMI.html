@@ -3,19 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>BMI</title>
+    <style>
+        p,td{
+            text-align: left;
+            margin-left: 10px;
+        }
+        button{
+            margin-left: 25%;
+        }
+    </style>
 </head>
 <body>
-<p>Nhập cân nặng</p>
-<input id="kg" type="number" placeholder="kg"><br>
-<p>Nhập chiều cao</p>
-<input id="m" type="number" placeholder="m" ><br>
-<button type="button" onclick="cal()">Lấy kết quả</button>
+<table style="margin: auto; background-color: gray">
+    <tr>
+        <td style="background-color: gold">
+            <p>Nhập cân nặng</p>
+            <input id="kg" type="number" placeholder="kg"><br>
+            <p>Nhập chiều cao</p>
+            <input id="m" type="number" placeholder="m" ><br><br>
+            <button type="button" onclick="cal()">Lấy kết quả</button>
+        </td>
+        <td style="width: 600px">
+            <h2 style="text-align: center">Chỉ số BMI là gì</h2>
+            <p> Chỉ số BMI (chỉ số khối cơ thể) là điểm số tiêu chuẩn
+                để xác định mức cân nặng của một người dựa trên chiều cao, cân nặng của cơ thể.
+                Với chỉ số BMI bạn có thể biết được cơ thể của
+                mình thuộc tình trạng: nhẹ cân, bình thường, thừa cân hay béo phì.
+            <p>BMI là từ viết tắt tiếng Anh của: Body Mass Index</p>
+            <p>Chỉ số BMI có sự thay đổi giữa các quốc gia</p>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="width: 600px">
+            <p>-  Cách đánh giá chỉ số BMI</p>
+            <p>Đối với người lớn từ 20 tuổi trở lên, Sử dụng bảng phân loại chuẩn cho cả nam và nữ để đánh giá chỉ số BMI.</p>
+
+            <p>- BMI <16: Gầy độ III</p>
+
+            <p>  - 16 ≤ BMI <17: Gầy độ II</p>
+
+            <p>   - 17 ≤ BMI <18.5: Gầy độ I</p>
+
+            <p> - 18.5 ≤ BMI <25: Bình thường</p>
+
+            <p>   - 25 ≤ BMI <30: Thừa cân</p>
+
+            <p> - 30 ≤ BMI 35: Béo phì độ 1</p>
+
+            <p>  - 35 ≤ BMI <40: Béo phì độ II</p>
+
+            <p> - BMI >40: Béo phì độ III </p>
+        </td>
+    </tr>
+</table>
+
 </body>
 <script>
     function cal() {
         let x = parseFloat(document.getElementById("kg").value)
         let y = parseFloat(document.getElementById("m").value)
-        let bmi = x/ (y*y);
+        let bmi = (x/ (y*y)).toFixed(2);
+
         if (bmi >= 40) {
             alert("bạn bị béo phì cấp IV");
         }
@@ -37,6 +86,7 @@
         else {
             alert("bạn gầy quá")
         }
+        alert("bmi của bạn là "+bmi)
     }
 </script>
 </html>
